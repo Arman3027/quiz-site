@@ -5,8 +5,8 @@ function App() {
   const [questions, setQuestions] = useState([]);
   const [filterQuestions, setfilterQuestions] = useState([]);
   const [randomQuestion, setRandomQuestion] = useState([]);
-  const [iscorrect, setCorrect] = useState(null)
-  const [wrong, setWrong] = useState(null);
+  const [iscorrect, setCorrect] = useState(0)
+  const [wrong, setWrong] = useState(0);
   const [count, setCount] = useState(null)
 
   let startDiv = useRef(null);
@@ -153,132 +153,132 @@ function App() {
     if (trueAnswer[0] === "answer_f_correct") {
       x = 5; 
     }
-    if (btnBox[x].style.backgroundColor === "green" || btnBox[index - 1].style.backgroundColor === 'green') {
+    if (btnBox[x].style.border === "5px solid green" || btnBox[index - 1].style.border === '5px solid green') {
       return
     }
     if (index === 1) {
       if (correct.answer_a_correct === "true") {
-        btnBox[index - 1].style.backgroundColor = "green";
+        btnBox[index - 1].style.border = "5px solid green";
         setCorrect(iscorrect + 1)
         setCount(count + 1)
         setTimeout(() => {
-        btnBox[index - 1].style.backgroundColor = "rgb(53, 46, 255)";
+        btnBox[index - 1].style.border = "2px solid #fff";
           random();
         }, 2000);
       }
       if (correct.answer_a_correct === "false") {
-        btnBox[index - 1].style.backgroundColor = "red";
-        btnBox[x].style.backgroundColor = "green";
+        btnBox[index - 1].style.border = "5px solid red";
+        btnBox[x].style.border = "5px solid green";
         setWrong(wrong + 1)
         setCount(count + 1);
         setTimeout(() => {
-          btnBox[index - 1].style.backgroundColor = "rgb(53, 46, 255)";
-        btnBox[x].style.backgroundColor = "rgb(53, 46, 255)";
+          btnBox[index - 1].style.border = "2px solid #fff";
+        btnBox[x].style.border = "2px solid #fff";
           random();
         }, 2000);
       }
     } else if (index === 2) {
       if (correct.answer_b_correct === "true") {
-        btnBox[index - 1].style.backgroundColor = "green";
+        btnBox[index - 1].style.border = "5px solid green";
         setCorrect(iscorrect + 1);
         setCount(count + 1);
         setTimeout(() => {
-        btnBox[index - 1].style.backgroundColor = "rgb(53, 46, 255)";
+        btnBox[index - 1].style.border = "2px solid #fff";
           random();
         }, 2000);
       }
       if (correct.answer_b_correct === "false") {
-        btnBox[index - 1].style.backgroundColor = "red";
-        btnBox[x].style.backgroundColor = "green";
+        btnBox[index - 1].style.border = "5px solid red";
+        btnBox[x].style.border = "5px solid green";
         setWrong(wrong + 1)
         setCount(count + 1);
         setTimeout(() => {
-          btnBox[index - 1].style.backgroundColor = "rgb(53, 46, 255)";
-        btnBox[x].style.backgroundColor = "rgb(53, 46, 255)";
+          btnBox[index - 1].style.border = "2px solid #fff";
+        btnBox[x].style.border = "2px solid #fff";
           random();
         }, 2000);
       }
     } else if (index === 3) {
       if (correct.answer_c_correct === "true") {
-        btnBox[index - 1].style.backgroundColor = "green";
+        btnBox[index - 1].style.border = "5px solid green";
         setCorrect(iscorrect + 1);
         setCount(count + 1);
         setTimeout(() => {
-        btnBox[index - 1].style.backgroundColor = "rgb(53, 46, 255)";
+        btnBox[index - 1].style.border = "2px solid #fff";
           random();
         }, 2000);
       }
       if (correct.answer_c_correct === "false") {
-        btnBox[index - 1].style.backgroundColor = "red";
-        btnBox[x].style.backgroundColor = "green";
+        btnBox[index - 1].style.border = "5px solid red";
+        btnBox[x].style.border = "5px solid green";
         setWrong(wrong + 1)
         setCount(count + 1);
         setTimeout(() => {
-          btnBox[index - 1].style.backgroundColor = "rgb(53, 46, 255)";
-        btnBox[x].style.backgroundColor = "rgb(53, 46, 255)";
+          btnBox[index - 1].style.border = "2px solid #fff";
+        btnBox[x].style.border = "2px solid #fff";
           random();
         }, 2000);
       }
     } else if (index === 4) {
       if (correct.answer_d_correct === "true") {
-        btnBox[index - 1].style.backgroundColor = "green";
+        btnBox[index - 1].style.border = "5px solid green";
         setCorrect(iscorrect + 1);
         setCount(count + 1);
         setTimeout(() => {
-        btnBox[index - 1].style.backgroundColor = "rgb(53, 46, 255)";
+        btnBox[index - 1].style.border = "2px solid #fff";
           random();
         }, 2000);
       }
       if (correct.answer_d_correct === "false") {
-        btnBox[index - 1].style.backgroundColor = "red";
-        btnBox[x].style.backgroundColor = "green";
+        btnBox[index - 1].style.border = "5px solid red";
+        btnBox[x].style.border = "5px solid green";
         setWrong(wrong + 1)
         setCount(count + 1);
         setTimeout(() => {
-          btnBox[index - 1].style.backgroundColor = "rgb(53, 46, 255)";
-        btnBox[x].style.backgroundColor = "rgb(53, 46, 255)";
+          btnBox[index - 1].style.border = "2px solid #fff";
+        btnBox[x].style.border = "2px solid #fff";
           random();
         }, 2000);
       }
     } else if (index === 5) {
       if (correct.answer_e_correct === "true") {
-        btnBox[index - 1].style.backgroundColor = "green";
+        btnBox[index - 1].style.border = "5px solid green";
         setCorrect(iscorrect + 1);
         setCount(count + 1);
         setTimeout(() => {
-        btnBox[index - 1].style.backgroundColor = "rgb(53, 46, 255)";
+        btnBox[index - 1].style.border = "2px solid #fff";
           random();
         }, 2000);
       }
       if (correct.answer_e_correct === "false") {
-        btnBox[index - 1].style.backgroundColor = "red";
-        btnBox[x].style.backgroundColor = "green";
+        btnBox[index - 1].style.border = "5px solid red";
+        btnBox[x].style.border = "5px solid green";
         setWrong(wrong + 1)
         setCount(count + 1);
         setTimeout(() => {
-          btnBox[index - 1].style.backgroundColor = "rgb(53, 46, 255)";
-        btnBox[x].style.backgroundColor = "rgb(53, 46, 255)";
+          btnBox[index - 1].style.border = "2px solid #fff";
+        btnBox[x].style.border = "2px solid #fff";
           random();
         }, 2000);
       }
     } else if (index === 6) {
       if (correct.answer_f_correct === "true") {
-        btnBox[index - 1].style.backgroundColor = "green";
+        btnBox[index - 1].style.border = "5px solid green";
         setCorrect(iscorrect + 1);
         setCount(count + 1);
         setTimeout(() => {
-        btnBox[index - 1].style.backgroundColor = "rgb(53, 46, 255)";
+        btnBox[index - 1].style.border = "2px solid #fff";
           random();
         }, 2000);
       }
       if (correct.answer_f_correct === "false") {
-        btnBox[index - 1].style.backgroundColor = "red";
-        btnBox[x].style.backgroundColor = "green";
+        btnBox[index - 1].style.border = "5px solid red";
+        btnBox[x].style.border = "5px solid green";
         setWrong(wrong + 1);
         setCount(count + 1);
         setTimeout(() => {
-          btnBox[index - 1].style.backgroundColor = "rgb(53, 46, 255)";
-        btnBox[x].style.backgroundColor = "rgb(53, 46, 255)";
+          btnBox[index - 1].style.border = "2px solid #fff";
+        btnBox[x].style.border = "2px solid #fff";
           random();
         }, 2000);
       }
